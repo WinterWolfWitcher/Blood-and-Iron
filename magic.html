@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magic — Blood &amp; Iron</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.prose-block { max-width:740px; color:#a89880; font-size:1.05rem; }
+.prose-block p { margin-bottom:1.2rem; }
+.prose-block p:last-child { margin-bottom:0; }
+
+.discipline-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.5rem; margin:2rem 0; }
+
+.discipline-card { background-color:#221c15; border:1px solid #3d3020; padding:2rem; position:relative; overflow:hidden; }
+.discipline-card::before { content:’’; position:absolute; top:0; left:0; width:100%; height:3px; }
+.discipline-card.fire::before   { background:linear-gradient(to right,#8b1a1a,#c06020); }
+.discipline-card.ice::before    { background:linear-gradient(to right,#1a3a5c,#a0c8d8); }
+.discipline-card.lightning::before { background:linear-gradient(to right,#4a3a8b,#c9c84c); }
+.discipline-card.earth::before  { background:linear-gradient(to right,#3a2a1a,#6b5a3a); }
+
+.discipline-icon { font-family:‘Cinzel Decorative’,Georgia,serif; font-size:2rem; margin-bottom:1rem; line-height:1; }
+.discipline-card.fire .discipline-icon     { color:#c06020; }
+.discipline-card.ice .discipline-icon      { color:#a0c8d8; }
+.discipline-card.lightning .discipline-icon { color:#c9c84c; }
+.discipline-card.earth .discipline-icon    { color:#6b5a3a; }
+
+.discipline-name { font-family:‘Cinzel’,Georgia,serif; font-size:1.1rem; letter-spacing:0.1em; color:#e8dcc8; margin-bottom:0.75rem; }
+.discipline-desc { color:#a89880; font-size:0.95rem; line-height:1.65; margin-bottom:1rem; }
+.discipline-examples { border-top:1px solid #3d3020; padding-top:1rem; margin-top:1rem; }
+.discipline-examples-label { font-family:‘Cinzel’,Georgia,serif; font-size:0.58rem; letter-spacing:0.3em; text-transform:uppercase; color:#6b5d4f; margin-bottom:0.5rem; }
+.discipline-examples p { font-size:0.88rem; color:#6b5d4f; font-style:italic; line-height:1.6; }
+
+.warning-block { background-color:#2e2418; border:1px solid #3d3020; border-left:3px solid #8b7a1a; padding:2rem 2.5rem; margin:3rem 0; }
+.warning-label { font-family:‘Cinzel’,Georgia,serif; font-size:0.65rem; letter-spacing:0.3em; text-transform:uppercase; color:#c8b84a; margin-bottom:0.75rem; }
+.warning-block p { color:#a89880; font-size:1rem; margin-bottom:0.75rem; }
+.warning-block p:last-child { margin-bottom:0; }
+</style>
+
+</head>
+<body>
+<header>
+  <nav><ul>
+    <li><a href="index.html">The World</a></li>
+    <li><a href="kingdoms.html">Kingdoms</a></li>
+    <li><a href="geography.html">Geography</a></li>
+    <li><a href="conflict.html">The Conflict</a></li>
+    <li><a href="faith.html">The Faith</a></li>
+    <li><a href="magic.html" class="active">Magic</a></li>
+    <li><a href="bestiary.html">Bestiary</a></li>
+  </ul></nav>
+</header>
+<main>
+  <div class="page-header">
+    <p class="page-eyebrow">The Unseen Arts</p>
+    <h1 class="page-title">Magic</h1>
+    <p class="page-subtitle">Rare, elemental, and tied to the inner state of the practitioner. Present in the world since before the kingdoms were built. Never fully understood by any of them.</p>
+  </div>
+  <div class="content-wrapper">
+
+```
+<div class="reveal">
+  <p class="section-label">Overview</p>
+  <h2 class="section-title">What Magic Is</h2>
+  <div class="prose-block">
+    <p>Magic in this world is not a general force. It is not energy drawn from the air or power pulled from the earth in an undifferentiated form. It is elemental at its core — specific expressions of specific disciplines, each with its own character, its own demands, and its own ceiling.</p>
+    <p>A practitioner works within an affinity. Most have one primary discipline. A secondary is possible with dedicated training, but nobody works across all four. The disciplines are fire, ice, lightning, and earth — each distinct in how it behaves, what it can accomplish, and what kind of person tends to carry it.</p>
+    <p>Magic is rare. It is heritable but not guaranteed — a practitioner's children may carry it, or may not. Most people go their entire lives without seeing it used. Most soldiers have never encountered it on a battlefield. Most priests have never witnessed a confirmed instance of it. Its rarity is part of why the Faith has been inconsistent about how to treat it across different eras and regions — it is hard to develop a settled doctrine about something most of your clergy have never seen.</p>
+    <p>Practitioners look like everyone else. There are no visible markers, no physical tells, no way to identify someone as a magic user from across a room. A practitioner looks like a scholar or a soldier or a farmer until the moment they do not.</p>
+  </div>
+</div>
+
+<div class="ornamental-rule reveal"><span>✦</span></div>
+
+<div class="reveal">
+  <p class="section-label">The Four Disciplines</p>
+  <h2 class="section-title">Elemental Affinities</h2>
+</div>
+
+<div class="discipline-grid">
+
+  <div class="discipline-card fire reveal">
+    <div class="discipline-icon">🜂</div>
+    <h3 class="discipline-name">Fire</h3>
+    <p class="discipline-desc">The most immediately offensive of the four. At low skill it is blunt — an eruption in a direction, more devastating to the practitioner's control than to a specific target. At high skill it becomes precise: a sustained thrust narrow enough to cut, heat concentrated enough to work specific metal without burning the hand that holds it. Fire can be shaped, concentrated, and held. It can also intercept and counter incoming fire from another practitioner.</p>
+    <div class="discipline-examples">
+      <p class="discipline-examples-label">High-skill applications</p>
+      <p>Sustained directional thrust. Precision heating. Counter-fire interception. Controlled burns with clean edges. Sustained flight, in theory, if the practitioner can maintain the thrust beneath them — exhausting and dangerous, but documented.</p>
+    </div>
+  </div>
+
+  <div class="discipline-card ice reveal">
+    <div class="discipline-icon">🜄</div>
+    <h3 class="discipline-name">Ice</h3>
+    <p class="discipline-desc">The most constructive and versatile of the four. Ice builds things — barriers, projectiles, platforms, spikes, cages, bridges. It freezes standing water immediately. It freezes moving water nearly as fast at sufficient skill. In combat it is flexible in a way fire is not: a fire practitioner attacks; an ice practitioner attacks and builds simultaneously, shaping the battlefield. Defensive shields of ice absorb physical impact as well as opposing elements.</p>
+    <div class="discipline-examples">
+      <p class="discipline-examples-label">High-skill applications</p>
+      <p>Rapid complex constructions in active combat. Instant freezing of rivers and streams. Full encasement barriers. Projectile formation and launch. Layered defensive shields. Structural supports that hold weight.</p>
+    </div>
+  </div>
+
+  <div class="discipline-card lightning reveal">
+    <div class="discipline-icon">🜁</div>
+    <h3 class="discipline-name">Lightning</h3>
+    <p class="discipline-desc">Fast, lethal, and narrow. Lightning finds a target and ends it. It is less versatile than fire or ice — you cannot build with it, you cannot shape a battlefield with it, you cannot sustain it across a duration in the way fire can be sustained. What it does, it does completely. Nothing that takes a direct strike from a skilled lightning practitioner survives it. The limitation is targeting: it is a single point of devastating force, not an area of effect.</p>
+    <div class="discipline-examples">
+      <p class="discipline-examples-label">High-skill applications</p>
+      <p>Instantaneous single-target kills at range. Conducted strikes through metal or water. Chain strikes if targets are close enough. Disruption of other practitioners' concentration at the moment of release.</p>
+    </div>
+  </div>
+
+  <div class="discipline-card earth reveal">
+    <div class="discipline-icon">🜃</div>
+    <h3 class="discipline-name">Earth &amp; Metal</h3>
+    <p class="discipline-desc">Control over physical material — iron, stone, soil, and the things built from them. The heaviest of the four disciplines and the slowest to initiate, but the most massive in effect. An earth practitioner does not strike fast. They shift the ground, collapse structures, pull metal toward them or drive it away. At high skill the scale of effect is extraordinary and the physical effort is corresponding. Earth magic is not for skirmishes.</p>
+    <div class="discipline-examples">
+      <p class="discipline-examples-label">High-skill applications</p>
+      <p>Structural collapse. Ground deformation. Metal manipulation at range. Wall raising and demolition. Pulling weapons from hands. Entrapment in stone. Effects that persist after the practitioner releases focus.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="ornamental-rule reveal"><span>✦</span></div>
+
+<div class="reveal">
+  <p class="section-label">The Internal Component</p>
+  <h2 class="section-title">Magic &amp; the Self</h2>
+  <div class="prose-block">
+    <p>Magic is not purely a physical skill. It is tied to the psychological state of the practitioner in a way that has no equivalent in swordsmanship or archery. A swordsman with a broken arm cannot fight. A magic practitioner with a broken inner life may not be able to access their ability at all — not because of physical injury, but because of internal damage that blocks what would otherwise be available.</p>
+    <p>Trauma can close off access entirely. It is not a curse and it is not an injury in any way that a physician can treat. The block is internal. It responds to internal work — meditation, time, deliberate confrontation of whatever caused the damage. This is one reason why the disciplines that exist around magic study tend to resemble spiritual practice more than martial training.</p>
+    <p>The flip side: in undertrained practitioners, magic can erupt under emotional pressure. The ability does not wait for control to be established. A frightened adolescent with fire affinity is a specific kind of danger that people in the vicinity of that adolescent may not survive. This is one of the more pressing reasons practitioners seek training, and one of the more pressing reasons trained practitioners seek out uncontrolled ones.</p>
+    <p>Access is maintained through focus — breath control, meditation, deliberate centering. The practices this requires exist in adjacent tradition to what the Faith calls spiritual discipline. This creates friction. The Faith has been inconsistent about how to treat magic users across eras and regions, alternating between incorporating them into Church structures and persecuting them depending on local politics and whoever holds the relevant bishop's seat. With the Greymarch incident making the impossible newly possible, the Church's current position on magic practitioners is an active and unsettled question.</p>
+  </div>
+</div>
+
+<div class="warning-block reveal">
+  <p class="warning-label">On Identification</p>
+  <p>There is no reliable method for identifying a magic practitioner by appearance. They look like everyone else. The only visible indicators appear during or immediately after use — elevated temperature around a fire practitioner, frost on surfaces near an ice practitioner, the smell of ozone that follows lightning. None of these persist for long. A practitioner who chooses not to use their ability in your presence is indistinguishable from someone who does not have it.</p>
+  <p>This is relevant to anyone who believes they have reason to seek one out, avoid one, or identify one to the authorities. The authorities share your problem.</p>
+</div>
+```
+
+  </div>
+</main>
+<footer><p>Blood &amp; Iron &mdash; The Seven Kingdoms &mdash; A Community Lore Setting</p></footer>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.06 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
