@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kingdoms — Blood &amp; Iron</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.kingdom-full { background-color:#221c15; border:1px solid #3d3020; margin-bottom:3rem; overflow:hidden; }
+.kingdom-color-bar { width:100%; height:4px; }
+.kingdom-full.dravek .kingdom-color-bar   { background:linear-gradient(to right,#8b1a1a,#1a3a5c); }
+.kingdom-full.kelnvar .kingdom-color-bar  { background:linear-gradient(to right,#8b7a1a,#2d5a2d); }
+.kingdom-full.valdrek .kingdom-color-bar  { background:linear-gradient(to right,#555,#ccc); }
+.kingdom-full.grimholt .kingdom-color-bar { background:linear-gradient(to right,#222,#888); }
+.kingdom-full.sorvast .kingdom-color-bar  { background:linear-gradient(to right,#c06020,#6b4a1a); }
+.kingdom-full.merath .kingdom-color-bar   { background:linear-gradient(to right,#ccc,#1a3a5c); }
+.kingdom-full.caldrath .kingdom-color-bar { background:linear-gradient(to right,#8b1a1a,#c9a84c); }
+.kf-header { padding:2.5rem 2.5rem 1.5rem; border-bottom:1px solid #3d3020; }
+.kf-colors { display:flex; gap:0.5rem; align-items:center; margin-bottom:1rem; }
+.kf-swatch { width:22px; height:22px; border:1px solid rgba(255,255,255,0.15); }
+.kf-color-label { font-family:'Cinzel',Georgia,serif; font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:#6b5d4f; margin-left:0.5rem; }
+.kf-name { font-family:'Cinzel Decorative',Georgia,serif; font-size:1.8rem; color:#e8dcc8; margin-bottom:0.25rem; }
+.kf-heraldry { font-style:italic; color:#c9a84c; font-size:1rem; margin-bottom:0.75rem; }
+.kf-status { display:inline-block; font-family:'Cinzel',Georgia,serif; font-size:0.58rem; letter-spacing:0.25em; text-transform:uppercase; padding:0.3rem 0.8rem; border:1px solid; }
+.kf-status.war     { color:#c0392b; border-color:#8b1a1a; background-color:rgba(139,26,26,0.1); }
+.kf-status.neutral { color:#6b5d4f; border-color:#3d3020; }
+.kf-body { padding:2rem 2.5rem; }
+.kf-body p { color:#a89880; margin-bottom:1rem; max-width:760px; font-size:1.05rem; }
+.kf-body p:last-child { margin-bottom:0; }
+.kf-facts { display:flex; gap:2rem; flex-wrap:wrap; padding:1.5rem 2.5rem; border-top:1px solid #3d3020; background-color:rgba(0,0,0,0.15); }
+.kf-fact { display:flex; flex-direction:column; gap:0.2rem; }
+.kf-fact-label { font-family:'Cinzel',Georgia,serif; font-size:0.58rem; letter-spacing:0.3em; text-transform:uppercase; color:#6b5d4f; }
+.kf-fact-value { font-family:'Cinzel',Georgia,serif; font-size:0.85rem; color:#e8dcc8; }
+.armor-note { background-color:#2e2418; border:1px solid #3d3020; border-left:3px solid #c9a84c; padding:2rem 2.5rem; margin-bottom:4rem; }
+.armor-note-label { font-family:'Cinzel',Georgia,serif; font-size:0.65rem; letter-spacing:0.3em; text-transform:uppercase; color:#c9a84c; margin-bottom:0.75rem; }
+.armor-note p { color:#a89880; font-size:1rem; margin-bottom:0.75rem; }
+.armor-note p:last-child { margin-bottom:0; }
+</style>
+</head>
+<body>
+<header>
+  <nav><ul>
+    <li><a href="index.html">The World</a></li>
+    <li><a href="kingdoms.html" class="active">Kingdoms</a></li>
+    <li><a href="geography.html">Geography</a></li>
+    <li><a href="conflict.html">The Conflict</a></li>
+    <li><a href="faith.html">The Faith</a></li>
+    <li><a href="magic.html">Magic</a></li>
+    <li><a href="bestiary.html">Bestiary</a></li>
+  </ul></nav>
+</header>
+<main>
+  <div class="page-header">
+    <p class="page-eyebrow">The Powers</p>
+    <h1 class="page-title">The Seven Kingdoms</h1>
+    <p class="page-subtitle">Seven powers share a continent. Five of them are watching. Two of them are at war.</p>
+  </div>
+  <div class="content-wrapper">
+
+```
+<div class="armor-note reveal">
+  <p class="armor-note-label">A Note on Arms &amp; Heraldry</p>
+  <p>Military kit is largely shared across all seven kingdoms — gambeson base layer, chainmail coif at the neck and shoulders, plate at the legs, waist, gauntlets, and boots. The surcoat worn over the armor carries the kingdom's colors and device, making allegiance visible at a distance. Lords' horses wear caparisons in kingdom colors. Standard soldiers' horses wear working tack.</p>
+  <p>The surcoat pattern varies by kingdom. The heraldic device is painted on the heater shield face. On a sword the cross appears naturally in the crossguard geometry — the weapon is already a symbol by its shape. On devotional metalwork the sun cross appears as an equal-armed cross within a circle, with spoke-work between the arms and a gemstone at the center for consecrated pieces.</p>
+</div>
+
+<div class="kingdom-full dravek reveal">
+  <div class="kingdom-color-bar"></div>
+  <div class="kf-header">
+    <div class="kf-colors">
+      <div class="kf-swatch" style="background-color:#8b1a1a;"></div>
+      <div class="kf-swatch" style="background-color:#1a3a5c;"></div>
+      <span class="kf-color-label">Red &amp; Blue</span>
+    </div>
+    <h2 class="kf-name">Dravek</h2>
+    <p class="kf-heraldry">Red Eagle on Blue — quartered surcoat field</p>
+    <span class="kf-status war">Active Conflict</span>
+  </div>
+  <div class="kf-body">
+    <p>Dravek is the home kingdom — the place from which most stories in this world begin. It sits in the central-western portion of the continent, sharing its longest border with Kelnvar to the east. The two kingdoms are close enough in culture and language that the argument about where one ends and the other begins has been running for three generations.</p>
+    <p>The eagle has been Dravek's device since before anyone currently living can remember choosing it. Red on blue. Aggressive posture, wings spread, talons displayed. It does not look like a kingdom that intends to lose ground, which makes the current situation in Strelnov a matter of some embarrassment to the crown.</p>
+    <p>Dravek is currently on the back foot in the Strelnov silver engagement. Eight to eleven months of back-and-forth fighting has left them holding less ground than they started with. The push to reclaim that ground is the immediate military priority — a priority that was complicated without warning by what came down from the Greymarch.</p>
+  </div>
+  <div class="kf-facts">
+    <div class="kf-fact"><span class="kf-fact-label">Colors</span><span class="kf-fact-value">Red &amp; Blue</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Device</span><span class="kf-fact-value">Red Eagle</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Field</span><span class="kf-fact-value">Blue, quartered</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Status</span><span class="kf-fact-value">At war with Kelnvar</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Position</span><span class="kf-fact-value">Home kingdom</span></div>
+  </div>
+</div>
+
+<div class="kingdom-full kelnvar reveal">
+  <div class="kingdom-color-bar"></div>
+  <div class="kf-header">
+    <div class="kf-colors">
+      <div class="kf-swatch" style="background-color:#c8b84a;"></div>
+      <div class="kf-swatch" style="background-color:#2d5a2d;"></div>
+      <span class="kf-color-label">Pale Yellow &amp; Green</span>
+    </div>
+    <h2 class="kf-name">Kelnvar</h2>
+    <p class="kf-heraldry">Coiled Serpent on Yellow — whole body forms the device</p>
+    <span class="kf-status war">Active Conflict</span>
+  </div>
+  <div class="kf-body">
+    <p>Kelnvar sits to the east of Dravek, sharing the long disputed border. The two kingdoms are close enough in language and custom to argue about it, and have been — occasionally with armies. The current war is the most active phase of that argument in living memory.</p>
+    <p>The coiled serpent is their device, styled so that the entire body of the creature forms the shape of the emblem — coiled tight, head raised. Pale yellow and green. The serpent has been their symbol longer than anyone remembers the reason for choosing it. Given what lives in the wilderness beyond the settlements, that lack of memory may be more interesting than it first appears.</p>
+    <p>Kelnvar is currently pressing the advantage in Strelnov. They hold more ground than they started with and are in the stronger position of the two kingdoms in the current engagement. Holding that ground against a Dravek counteroffensive is their immediate military concern.</p>
+  </div>
+  <div class="kf-facts">
+    <div class="kf-fact"><span class="kf-fact-label">Colors</span><span class="kf-fact-value">Pale Yellow &amp; Green</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Device</span><span class="kf-fact-value">Coiled Serpent</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Status</span><span class="kf-fact-value">At war with Dravek</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Position</span><span class="kf-fact-value">Currently advancing</span></div>
+  </div>
+</div>
+
+<div class="ornamental-rule reveal"><span>✦</span></div>
+
+<div class="reveal" style="margin-bottom:2.5rem;">
+  <p class="section-label">The Five</p>
+  <h2 class="section-title">Background Kingdoms</h2>
+  <p class="section-intro">Five kingdoms exist beyond the immediate conflict. They are present in the world, present on the map, present in trade and diplomacy. They have all received the reports from the Greymarch.</p>
+</div>
+
+<div class="kingdom-full valdrek reveal">
+  <div class="kingdom-color-bar"></div>
+  <div class="kf-header">
+    <div class="kf-colors">
+      <div class="kf-swatch" style="background-color:#888;"></div>
+      <div class="kf-swatch" style="background-color:#ddd;"></div>
+      <span class="kf-color-label">Grey &amp; White</span>
+    </div>
+    <h2 class="kf-name">Valdrek</h2>
+    <p class="kf-heraldry">Rampant Bear on Grey</p>
+    <span class="kf-status neutral">Northern Kingdom</span>
+  </div>
+  <div class="kf-body">
+    <p>Northern kingdom. Grey forests, long winters, hard people. The bear stands rampant on grey — not subtle, not intended to be. Valdrek has been fighting its climate longer than it has been fighting its neighbors, and the two experiences have produced the same result.</p>
+  </div>
+  <div class="kf-facts">
+    <div class="kf-fact"><span class="kf-fact-label">Colors</span><span class="kf-fact-value">Grey &amp; White</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Device</span><span class="kf-fact-value">Rampant Bear</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Position</span><span class="kf-fact-value">Northern border</span></div>
+  </div>
+</div>
+
+<div class="kingdom-full grimholt reveal">
+  <div class="kingdom-color-bar"></div>
+  <div class="kf-header">
+    <div class="kf-colors">
+      <div class="kf-swatch" style="background-color:#222;"></div>
+      <div class="kf-swatch" style="background-color:#999;"></div>
+      <span class="kf-color-label">Black &amp; Silver</span>
+    </div>
+    <h2 class="kf-name">Grimholt</h2>
+    <p class="kf-heraldry">Running Wolf on Black</p>
+    <span class="kf-status neutral">Far Northern Kingdom</span>
+  </div>
+  <div class="kf-body">
+    <p>Further north than Valdrek, harder and leaner. The wolf on their field runs rather than stands — it is not posturing, it is moving. Black and silver. No warmth in those colors. The northernmost inhabited kingdom, and fully aware of what lies beyond them.</p>
+  </div>
+  <div class="kf-facts">
+    <div class="kf-fact"><span class="kf-fact-label">Colors</span><span class="kf-fact-value">Black &amp; Silver</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Device</span><span class="kf-fact-value">Running Wolf</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Position</span><span class="kf-fact-value">Far north</span></div>
+  </div>
+</div>
+
+<div class="kingdom-full sorvast reveal">
+  <div class="kingdom-color-bar"></div>
+  <div class="kf-header">
+    <div class="kf-colors">
+      <div class="kf-swatch" style="background-color:#c06020;"></div>
+      <div class="kf-swatch" style="background-color:#6b4a1a;"></div>
+      <span class="kf-color-label">Deep Orange &amp; Brown</span>
+    </div>
+    <h2 class="kf-name">Sorvast</h2>
+    <p class="kf-heraldry">Stag, Full Antlers Displayed</p>
+    <span class="kf-status neutral">Eastern Kingdom</span>
+  </div>
+  <div class="kf-body">
+    <p>Eastern kingdom. Flat land, horse culture, long sight lines. Orange and brown like autumn grassland going on for three days in every direction. The stag is fast, territorial, and dangerous when cornered — which describes their foreign policy with reasonable accuracy.</p>
+  </div>
+  <div class="kf-facts">
+    <div class="kf-fact"><span class="kf-fact-label">Colors</span><span class="kf-fact-value">Deep Orange &amp; Brown</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Device</span><span class="kf-fact-value">Stag</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Position</span><span class="kf-fact-value">Eastern border</span></div>
+  </div>
+</div>
+
+<div class="kingdom-full merath reveal">
+  <div class="kingdom-color-bar"></div>
+  <div class="kf-header">
+    <div class="kf-colors">
+      <div class="kf-swatch" style="background-color:#ddd;"></div>
+      <div class="kf-swatch" style="background-color:#1a3a5c;"></div>
+      <span class="kf-color-label">White &amp; Deep Blue</span>
+    </div>
+    <h2 class="kf-name">Merath</h2>
+    <p class="kf-heraldry">Lion Passant on White — walking, one paw raised</p>
+    <span class="kf-status neutral">Western Kingdom</span>
+  </div>
+  <div class="kf-body">
+    <p>Western kingdom, possibly coastal. The most politically sophisticated of the seven. The lion on their field walks rather than rages — calm, deliberate, watchful. Merath wins through patience and money. They have not lost a war in two generations, largely because they are careful about which wars they enter.</p>
+  </div>
+  <div class="kf-facts">
+    <div class="kf-fact"><span class="kf-fact-label">Colors</span><span class="kf-fact-value">White &amp; Deep Blue</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Device</span><span class="kf-fact-value">Lion Passant</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Position</span><span class="kf-fact-value">Western, possibly coastal</span></div>
+  </div>
+</div>
+
+<div class="kingdom-full caldrath reveal">
+  <div class="kingdom-color-bar"></div>
+  <div class="kf-header">
+    <div class="kf-colors">
+      <div class="kf-swatch" style="background-color:#8b1a1a;"></div>
+      <div class="kf-swatch" style="background-color:#c9a84c;"></div>
+      <span class="kf-color-label">Red &amp; Gold</span>
+    </div>
+    <h2 class="kf-name">Caldrath</h2>
+    <p class="kf-heraldry">Sun Disk with Rays — not an animal, a symbol</p>
+    <span class="kf-status neutral">Southern Kingdom — Seat of the Faith</span>
+  </div>
+  <div class="kf-body">
+    <p>Southernmost and oldest. Caldrath has been here longer than the other kingdoms and is not shy about it. The Faith has its deepest roots here. The Chancellor's seat is in a city that technically belongs to no kingdom but sits within Caldrath's sphere of influence — which amounts to the same thing in practice.</p>
+    <p>Red and gold. The sun disk rather than an animal, because they have been here long enough to choose their own terms. Caldrath is watching the Greymarch incident with particular interest. The Faith's response will be shaped significantly by what comes out of the Chancellor's offices, and those offices are here.</p>
+  </div>
+  <div class="kf-facts">
+    <div class="kf-fact"><span class="kf-fact-label">Colors</span><span class="kf-fact-value">Red &amp; Gold</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Device</span><span class="kf-fact-value">Sun Disk</span></div>
+    <div class="kf-fact"><span class="kf-fact-label">Position</span><span class="kf-fact-value">South — Seat of the Faith</span></div>
+  </div>
+</div>
+```
+
+  </div>
+</main>
+<footer><p>Blood &amp; Iron &mdash; The Seven Kingdoms &mdash; A Community Lore Setting</p></footer>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.04 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
