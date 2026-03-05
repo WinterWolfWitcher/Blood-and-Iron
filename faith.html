@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Faith — Blood &amp; Iron</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.prose-block { max-width:740px; color:#a89880; font-size:1.05rem; }
+.prose-block p { margin-bottom:1.2rem; }
+.prose-block p:last-child { margin-bottom:0; }
+
+.hierarchy { margin:3rem 0; }
+.hierarchy-item { display:flex; gap:2rem; padding:1.75rem 2rem; background-color:#221c15; border:1px solid #3d3020; border-left:3px solid #c9a84c; margin-bottom:1rem; align-items:flex-start; transition:border-color 0.3s ease; }
+.hierarchy-item:hover { border-color:#7a6030; }
+.hierarchy-rank { font-family:‘Cinzel Decorative’,Georgia,serif; font-size:2rem; color:#7a6030; flex-shrink:0; line-height:1; width:2.5rem; text-align:center; }
+.hierarchy-content h3 { font-family:‘Cinzel’,Georgia,serif; font-size:1rem; letter-spacing:0.1em; color:#e8dcc8; margin-bottom:0.5rem; }
+.hierarchy-content p { color:#a89880; font-size:0.95rem; line-height:1.65; }
+
+.symbol-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1.5rem; margin:2rem 0; }
+.symbol-card { background-color:#2e2418; border:1px solid #3d3020; padding:2rem; }
+.symbol-name { font-family:‘Cinzel’,Georgia,serif; font-size:0.9rem; letter-spacing:0.1em; color:#c9a84c; margin-bottom:0.75rem; }
+.symbol-desc { color:#a89880; font-size:0.95rem; line-height:1.65; }
+
+.presence-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1rem; margin:2rem 0; }
+.presence-item { background-color:#221c15; border:1px solid #3d3020; padding:1.5rem; }
+.presence-kingdom { font-family:‘Cinzel’,Georgia,serif; font-size:0.85rem; letter-spacing:0.1em; color:#e8dcc8; margin-bottom:0.5rem; }
+.presence-level { font-size:0.85rem; color:#6b5d4f; font-style:italic; }
+.presence-level.strong { color:#c9a84c; }
+.presence-level.moderate { color:#a89880; }
+.presence-level.weak { color:#6b5d4f; }
+
+.crisis-block { background-color:#221c15; border:1px solid rgba(139,26,26,0.4); border-left:3px solid #8b1a1a; padding:2.5rem; margin:3rem 0; position:relative; }
+.crisis-block::before { content:‘Current Crisis’; position:absolute; top:-0.65rem; left:2rem; background-color:#221c15; padding:0 0.75rem; font-family:‘Cinzel’,Georgia,serif; font-size:0.62rem; letter-spacing:0.3em; text-transform:uppercase; color:#c0392b; }
+.crisis-block p { color:#a89880; font-size:1.05rem; margin-bottom:1rem; max-width:720px; }
+.crisis-block p:last-child { margin-bottom:0; }
+</style>
+
+</head>
+<body>
+<header>
+  <nav><ul>
+    <li><a href="index.html">The World</a></li>
+    <li><a href="kingdoms.html">Kingdoms</a></li>
+    <li><a href="geography.html">Geography</a></li>
+    <li><a href="conflict.html">The Conflict</a></li>
+    <li><a href="faith.html" class="active">The Faith</a></li>
+    <li><a href="magic.html">Magic</a></li>
+    <li><a href="bestiary.html">Bestiary</a></li>
+  </ul></nav>
+</header>
+<main>
+  <div class="page-header">
+    <p class="page-eyebrow">Religion &amp; Doctrine</p>
+    <h1 class="page-title">The Faith</h1>
+    <p class="page-subtitle">One institution spread across seven kingdoms, explaining the world with confidence — until recently.</p>
+  </div>
+  <div class="content-wrapper">
+
+```
+<div class="reveal">
+  <p class="section-label">Overview</p>
+  <h2 class="section-title">What It Is</h2>
+  <div class="prose-block">
+    <p>The Faith is the dominant religious institution of the known world. It is monotheistic, hierarchical, and has been actively expanding its presence across all seven kingdoms for the better part of two centuries. It is not the only religion — older beliefs persist in the northern kingdoms and in isolated villages everywhere — but it is the largest, the most organized, and the most politically significant.</p>
+    <p>It does not belong to any one kingdom. This is by design. The Faith maintains properties, clergy, and congregations on both sides of every border, including the current war zone between Dravek and Kelnvar. In theory this makes it neutral ground. In practice it makes it a political entity with interests in every conflict and leverage in every court.</p>
+    <p>The Church arrived in most of these territories by absorbing what was already there. The old pagan religions — nature worship, ancestral veneration, the old gods of the north and the old rituals of the harvest — were not destroyed so much as incorporated, renamed, and gradually marginalized. The sun cross that now appears above church doorways bears a structural resemblance to symbols that predate the Faith by a thousand years. The clergy prefer not to discuss this at length.</p>
+  </div>
+</div>
+
+<div class="ornamental-rule reveal"><span>✦</span></div>
+
+<div class="reveal">
+  <p class="section-label">Structure</p>
+  <h2 class="section-title">The Hierarchy</h2>
+  <div class="prose-block" style="margin-bottom:2rem;">
+    <p>The Faith operates through a clear hierarchy. Five tiers from the singular head to the village priest. Most common people live and die having interacted only with the lowest tier. The higher tiers interact with kings.</p>
+  </div>
+</div>
+
+<div class="hierarchy reveal">
+  <div class="hierarchy-item">
+    <span class="hierarchy-rank">I</span>
+    <div class="hierarchy-content">
+      <h3>The Chancellor</h3>
+      <p>The singular head of the Faith across all seven kingdoms. Seat of ultimate religious authority. Resides in a city that technically belongs to no kingdom but sits within Caldrath's sphere of influence. Untouchable by political authority in theory. Very much touched by politics in practice. When the Chancellor speaks on a matter of doctrine, the matter is considered settled — in principle.</p>
+    </div>
+  </div>
+  <div class="hierarchy-item">
+    <span class="hierarchy-rank">II</span>
+    <div class="hierarchy-content">
+      <h3>Archbishop</h3>
+      <p>Regional heads overseeing large territories, generally one per kingdom or major region. They answer to the Chancellor and are the tier at which active political maneuvering with secular lords takes place. Archbishops negotiate, advise, and occasionally threaten. Their territories do not map perfectly onto kingdom borders, which is a source of persistent friction with the nobility.</p>
+    </div>
+  </div>
+  <div class="hierarchy-item">
+    <span class="hierarchy-rank">III</span>
+    <div class="hierarchy-content">
+      <h3>Bishop</h3>
+      <p>Administers a city and its surrounding territory. The level at which the Faith begins having direct daily impact on how towns are governed, how disputes are settled, and who gets buried in consecrated ground. A bishop's opinion carries weight with local lords. A bishop's displeasure carries more.</p>
+    </div>
+  </div>
+  <div class="hierarchy-item">
+    <span class="hierarchy-rank">IV</span>
+    <div class="hierarchy-content">
+      <h3>Grand Priest</h3>
+      <p>Senior clergy at the local level. Runs a significant town church or a monastery. Often the most educated person within twenty miles. Has real community authority. The person a lord consults before making a public decision he wants blessed — and the person who decides whether that blessing is forthcoming.</p>
+    </div>
+  </div>
+  <div class="hierarchy-item">
+    <span class="hierarchy-rank">V</span>
+    <div class="hierarchy-content">
+      <h3>Priest</h3>
+      <p>The ground level. One per town, sometimes shared between villages. Most common people interact with no one higher than this their entire lives. The priest performs marriages, last rites, and harvest blessings. The priest hears confession and keeps records. The priest is often the only person in a village who can read.</p>
+    </div>
+  </div>
+</div>
+
+<div class="ornamental-rule reveal"><span>✦</span></div>
+
+<div class="reveal">
+  <p class="section-label">Symbols</p>
+  <h2 class="section-title">Sacred Imagery</h2>
+  <div class="prose-block" style="margin-bottom:2rem;">
+    <p>The Faith uses several related symbols, each appropriate to different contexts. The cross appears throughout — not because the Faith invented it, but because it kept arriving naturally in geometry, architecture, and the shapes of weapons, and the Faith was wise enough to claim what was already there.</p>
+  </div>
+</div>
+
+<div class="symbol-grid reveal">
+  <div class="symbol-card">
+    <h3 class="symbol-name">The Sun Cross</h3>
+    <p class="symbol-desc">An equal-armed cross set within a circle, with four decorative spokes between the arms. The primary devotional symbol — found on amulets, carved into stone, painted on church walls, and cast into the pommels of consecrated weapons. For ornate pieces the center holds a gemstone. The symbol predates the Faith by centuries and the Faith absorbed it wholesale.</p>
+  </div>
+  <div class="symbol-card">
+    <h3 class="symbol-name">The Long Cross</h3>
+    <p class="symbol-desc">Appears wherever architecture or geometry creates it — the spire of a church seen against the sky, the face of a heater shield with the device running to the bottom edge, the shape of a sword held upright. Nobody placed it there deliberately. It arrives by the nature of things. This is considered theologically significant and the clergy have elaborate explanations for why.</p>
+  </div>
+  <div class="symbol-card">
+    <h3 class="symbol-name">The Consecrated Sword</h3>
+    <p class="symbol-desc">A sword is already a cross by its geometry — crossguard and blade. Knights in the Faith's tradition have driven their swords into the ground and prayed over them for centuries, the weapon serving as a portable shrine. A consecrated sword may have the sun cross as the crossguard itself, or the pommel cast in that form. The weapon bears witness to the Faith by existing.</p>
+  </div>
+  <div class="symbol-card">
+    <h3 class="symbol-name">The Church Spire</h3>
+    <p class="symbol-desc">A cross mounted at the top of a church spire is visible from a distance and serves as landmark, territorial marker, and declaration of the Faith's presence simultaneously. The design allows the long-armed cross naturally — the vertical spire forms the longer arm, the horizontal cross-beam the shorter ones. Practical and theological at once.</p>
+  </div>
+</div>
+
+<div class="ornamental-rule reveal"><span>✦</span></div>
+
+<div class="reveal">
+  <p class="section-label">Presence</p>
+  <h2 class="section-title">Across the Seven Kingdoms</h2>
+  <div class="prose-block" style="margin-bottom:2rem;">
+    <p>The Faith is present in all seven kingdoms but not equally. Its strength varies by region, history, and how thoroughly it managed to displace the older beliefs when it arrived.</p>
+  </div>
+</div>
+
+<div class="presence-grid reveal">
+  <div class="presence-item">
+    <p class="presence-kingdom">Caldrath</p>
+    <p class="presence-level strong">Dominant — Chancellor's seat</p>
+  </div>
+  <div class="presence-item">
+    <p class="presence-kingdom">Dravek</p>
+    <p class="presence-level moderate">Strong — fully established</p>
+  </div>
+  <div class="presence-item">
+    <p class="presence-kingdom">Kelnvar</p>
+    <p class="presence-level moderate">Strong — fully established</p>
+  </div>
+  <div class="presence-item">
+    <p class="presence-kingdom">Merath</p>
+    <p class="presence-level moderate">Moderate — institutional presence</p>
+  </div>
+  <div class="presence-item">
+    <p class="presence-kingdom">Sorvast</p>
+    <p class="presence-level moderate">Moderate — growing influence</p>
+  </div>
+  <div class="presence-item">
+    <p class="presence-kingdom">Valdrek</p>
+    <p class="presence-level weak">Weak — old beliefs persist strongly</p>
+  </div>
+  <div class="presence-item">
+    <p class="presence-kingdom">Grimholt</p>
+    <p class="presence-level weak">Weak — old ways largely intact</p>
+  </div>
+</div>
+
+<div class="ornamental-rule reveal"><span>✦</span></div>
+
+<div class="crisis-block reveal">
+  <p>The Faith's current crisis is theological. For two centuries, the Church has classified dragon sightings as folk superstition — the embellishment of frightened people, the symbolic language of old stories that were never meant literally. Church murals still depict them, though the newer clergy prefer to describe these as allegorical.</p>
+  <p>There are now sixty-one confirmed eyewitnesses to the Greymarch incident across two armies. The accounts are consistent. The creature was real, it was large, it burned soldiers from both sides without distinguishing between them, and it took a horse.</p>
+  <p>The Chancellor has not yet issued a formal response. It is understood that one is being prepared. What that response says will determine a great deal — not just about dragons, but about everything else the Faith has been dismissing as superstition for the past two hundred years.</p>
+  <p>If dragons are real, what else is? The priests at the village level are being asked this question and they do not have answers. This is new. They are accustomed to having answers.</p>
+</div>
+```
+
+  </div>
+</main>
+<footer><p>Blood &amp; Iron &mdash; The Seven Kingdoms &mdash; A Community Lore Setting</p></footer>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.06 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
