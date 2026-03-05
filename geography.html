@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geography — Blood &amp; Iron</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.kingdom-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #3d3020;
+  flex-wrap: wrap;
+}
+
+.kingdom-badge {
+font-family: ‘Cinzel’, Georgia, serif;
+font-size: 0.65rem;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+padding: 0.4rem 1rem;
+border: 1px solid;
+white-space: nowrap;
+}
+
+.kingdom-badge.dravek  { color: #c0392b; border-color: #8b1a1a; background-color: rgba(139,26,26,0.1); }
+.kingdom-badge.kelnvar { color: #c8b84a; border-color: #8b7a1a; background-color: rgba(139,122,26,0.1); }
+.kingdom-badge.wild    { color: #6b5d4f; border-color: #3d3020; }
+
+.kingdom-title {
+font-family: ‘Cinzel’, Georgia, serif;
+font-size: 1.3rem;
+color: #e8dcc8;
+letter-spacing: 0.05em;
+}
+
+.settlement-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+gap: 1.5rem;
+margin-bottom: 5rem;
+}
+
+.settlement-card {
+background-color: #221c15;
+border: 1px solid #3d3020;
+border-left: 3px solid transparent;
+padding: 1.75rem;
+transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.settlement-card:hover {
+transform: translateY(-2px);
+border-color: #7a6030;
+border-left-color: inherit;
+}
+
+.settlement-card.dravek  { border-left-color: #8b1a1a; }
+.settlement-card.kelnvar { border-left-color: #8b7a1a; }
+.settlement-card.wild    { border-left-color: #2d5a2d; }
+.settlement-card.contested { border-left-color: #c9a84c; }
+
+.s-type {
+font-family: ‘Cinzel’, Georgia, serif;
+font-size: 0.58rem;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: #6b5d4f;
+margin-bottom: 0.4rem;
+}
+
+.s-name {
+font-family: ‘Cinzel’, Georgia, serif;
+font-size: 1.1rem;
+color: #e8dcc8;
+margin-bottom: 0.75rem;
+}
+
+.s-desc {
+font-size: 0.95rem;
+color: #a89880;
+line-height: 1.65;
+}
+
+.s-tag {
+display: inline-block;
+margin-top: 0.75rem;
+font-family: ‘Cinzel’, Georgia, serif;
+font-size: 0.55rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+padding: 0.2rem 0.6rem;
+border: 1px solid #3d3020;
+color: #6b5d4f;
+}
+
+.s-tag.red    { border-color: #8b1a1a; color: #c0392b; }
+.s-tag.gold   { border-color: #7a6030; color: #c9a84c; }
+
+.contested-region {
+background-color: #221c15;
+border: 1px solid rgba(139,26,26,0.4);
+padding: 3rem;
+margin-bottom: 4rem;
+position: relative;
+}
+
+.contested-region::before {
+content: ‘Contested Territory’;
+position: absolute;
+top: -0.65rem;
+left: 2rem;
+background-color: #221c15;
+padding: 0 0.75rem;
+font-family: ‘Cinzel’, Georgia, serif;
+font-size: 0.62rem;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: #c0392b;
+}
+
+.contested-region h3 {
+font-family: ‘Cinzel Decorative’, Georgia, serif;
+font-size: 1.6rem;
+color: #c9a84c;
+margin-bottom: 1rem;
+}
+
+.contested-region p {
+color: #a89880;
+margin-bottom: 1rem;
+max-width: 700px;
+}
+
+.contested-region p:last-child { margin-bottom: 0; }
+
+.wilderness-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 1.5rem;
+}
+
+.wild-card {
+background-color: #2e2418;
+border: 1px solid #3d3020;
+border-top: 3px solid #2d5a2d;
+padding: 2rem;
+}
+
+.wild-name {
+font-family: ‘Cinzel Decorative’, Georgia, serif;
+font-size: 1.1rem;
+color: #e8dcc8;
+margin-bottom: 1rem;
+}
+
+.wild-desc {
+font-size: 0.95rem;
+color: #a89880;
+line-height: 1.65;
+margin-bottom: 0.75rem;
+}
+
+.wild-warning {
+margin-top: 1rem;
+padding: 0.5rem 0.75rem;
+border-left: 2px solid #2d5a2d;
+font-size: 0.85rem;
+color: #6b5d4f;
+font-style: italic;
+}
+
+.travel-note {
+background-color: #2e2418;
+border: 1px solid #3d3020;
+border-left: 3px solid #2980b9;
+padding: 2rem 2.5rem;
+margin-bottom: 4rem;
+}
+
+.travel-note-label {
+font-family: ‘Cinzel’, Georgia, serif;
+font-size: 0.65rem;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: #2980b9;
+margin-bottom: 0.75rem;
+}
+
+.travel-note p {
+color: #a89880;
+font-style: italic;
+font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+.settlement-grid { grid-template-columns: 1fr; }
+.wilderness-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">The World</a></li>
+      <li><a href="kingdoms.html">Kingdoms</a></li>
+      <li><a href="geography.html" class="active">Geography</a></li>
+      <li><a href="conflict.html">The Conflict</a></li>
+      <li><a href="faith.html">The Faith</a></li>
+      <li><a href="magic.html">Magic</a></li>
+      <li><a href="bestiary.html">Bestiary</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <div class="page-header">
+    <p class="page-eyebrow">The Land</p>
+    <h1 class="page-title">Geography</h1>
+    <p class="page-subtitle">Settlements, wilderness, and the long stretches of nothing in between where the old things live.</p>
+  </div>
+
+  <div class="content-wrapper">
+
+```
+<div class="travel-note reveal">
+  <p class="travel-note-label">A Note on Distance</p>
+  <p>A man on foot covers perhaps twenty miles in a day on good road in good weather. A horse covers thirty to forty. What takes a week on foot takes two to three days in the saddle. The wilderness between settlements is not decorative. A forest that requires two days to ride through is a forest large enough to lose an army in. The roads connect the towns. What lies between the roads belongs to whatever was there before the roads were built.</p>
+</div>
+
+<!-- DRAVEK -->
+<div class="reveal">
+  <div class="kingdom-header">
+    <span class="kingdom-badge dravek">Dravek</span>
+    <h2 class="kingdom-title">Settlements of Dravek</h2>
+  </div>
+</div>
+
+<div class="settlement-grid">
+
+  <div class="settlement-card dravek reveal">
+    <p class="s-type">Market Town</p>
+    <h3 class="s-name">Trebnik</h3>
+    <p class="s-desc">Built at a crossroads where a shrine once stood before the Faith arrived and decided it had always been a church site. The shrine is still there, a little weathered, behind the newer stonework. Market town now. Busy, practical, and old enough to remember when it wasn't called Trebnik.</p>
+    <span class="s-tag">Central Dravek</span>
+  </div>
+
+  <div class="settlement-card dravek reveal">
+    <p class="s-type">Garrison Town</p>
+    <h3 class="s-name">Bormark</h3>
+    <p class="s-desc">Named for the pine forest — bor, pine; mark, boundary — that defines Dravek's northern edge. The forest is the landmark. The garrison town exists because you don't leave a forest that size unwatched. What the patrols have seen in the deeper wood they don't discuss in detail.</p>
+    <span class="s-tag red">Northern Border</span>
+  </div>
+
+  <div class="settlement-card dravek reveal">
+    <p class="s-type">River Settlement</p>
+    <h3 class="s-name">Solnast</h3>
+    <p class="s-desc">Salt trading settlement on flat ground near a river. The name derives from sol — salt. Unglamorous and essential. The kind of place nobody thinks about until the supply stops moving and suddenly everyone has opinions about it.</p>
+    <span class="s-tag">Western Dravek</span>
+  </div>
+
+  <div class="settlement-card dravek reveal">
+    <p class="s-type">River Town</p>
+    <h3 class="s-name">Vrazen</h3>
+    <p class="s-desc">The name predates the kingdom — it came with the land rather than being given to it. A river town built around an old bridge. The bridge is why the town exists. The town is why the bridge has been rebuilt three times. Old stones, old name, old argument about who owns the crossing rights.</p>
+    <span class="s-tag red">River Crossing</span>
+  </div>
+
+  <div class="settlement-card dravek reveal">
+    <p class="s-type">Agricultural Valley</p>
+    <h3 class="s-name">Lerin</h3>
+    <p class="s-desc">A wide valley settlement. Good soil, reliable harvests, the kind of place that feeds three other towns and receives no particular credit for it. Quiet, productive, and currently sending more men to the war than it can easily spare.</p>
+    <span class="s-tag">Southern Dravek</span>
+  </div>
+
+  <div class="settlement-card dravek reveal">
+    <p class="s-type">Waystation</p>
+    <h3 class="s-name">Kradov</h3>
+    <p class="s-desc">Exists because it is exactly halfway between two larger settlements and horses need rest. One inn, a stable, a blacksmith, a small church. The kind of place you sleep at because you have to. The innkeeper knows everything that moves through Dravek because everything stops here.</p>
+    <span class="s-tag">Trade Road</span>
+  </div>
+
+  <div class="settlement-card dravek reveal">
+    <p class="s-type">Fortified Hilltop</p>
+    <h3 class="s-name">Melnast</h3>
+    <p class="s-desc">The oldest continuously inhabited settlement in Dravek, sitting on a ridge above a river valley with walls that were old before the current kingdom claimed them. The locals are proud of this in a quiet, stubborn way. The view from the walls shows three days of territory in every direction.</p>
+    <span class="s-tag red">Eastern Dravek</span>
+  </div>
+
+</div>
+
+<div class="ornamental-rule reveal"><span>✦</span></div>
+
+<!-- KELNVAR -->
+<div class="reveal">
+  <div class="kingdom-header">
+    <span class="kingdom-badge kelnvar">Kelnvar</span>
+    <h2 class="kingdom-title">Settlements of Kelnvar</h2>
+  </div>
+</div>
+
+<div class="settlement-grid">
+
+  <div class="settlement-card kelnvar reveal">
+    <p class="s-type">Border Region</p>
+    <h3 class="s-name">Sudmark</h3>
+    <p class="s-desc">Southern boundary. Sud — south. Mark — boundary. The name is purely functional and the people who live here know what that means. Kelnvar's administration thins out here. The roads are worse. The winters are longer. The locals have learned to solve their own problems.</p>
+    <span class="s-tag">Southern Kelnvar</span>
+  </div>
+
+  <div class="settlement-card kelnvar reveal">
+    <p class="s-type">Fortified Town</p>
+    <h3 class="s-name">Targeln</h3>
+    <p class="s-desc">Named for a noble family called something like Targel who held this land long enough that the land took their name. That family is gone now. The walls are older than Kelnvar's claim to them. The current garrison treats that history as irrelevant.</p>
+    <span class="s-tag red">Central Kelnvar</span>
+  </div>
+
+  <div class="settlement-card kelnvar reveal">
+    <p class="s-type">River Basin Town</p>
+    <h3 class="s-name">Pathia</h3>
+    <p class="s-desc">Wide river, slow water, known for fishing and river trade. Has changed hands peacefully through marriage three times and violently twice. The current residents have developed a philosophical relationship with political authority. The fish don't care who owns the river.</p>
+    <span class="s-tag">Western Kelnvar</span>
+  </div>
+
+  <div class="settlement-card kelnvar reveal">
+    <p class="s-type">Mining Town</p>
+    <h3 class="s-name">Kobet</h3>
+    <p class="s-desc">An iron and copper mining town that predates the silver conflict by generations. The miners here are insular, generational, deeply unimpressed by whichever kingdom currently claims to own them. They were pulling metal from these hills before anyone knew there was silver deeper in.</p>
+    <span class="s-tag">Northern Kelnvar</span>
+  </div>
+
+  <div class="settlement-card kelnvar reveal">
+    <p class="s-type">Timber Town</p>
+    <h3 class="s-name">Drupan</h3>
+    <p class="s-desc">Logging and lumber in Kelnvar's forested eastern reach. Supplies construction wood, charcoal for smelting, tool handles. Essential and unglamorous. Slightly resentful of both kingdoms equally, having supplied timber to armies on both sides at various points in the last thirty years.</p>
+    <span class="s-tag">Eastern Kelnvar</span>
+  </div>
+
+  <div class="settlement-card contested reveal">
+    <p class="s-type">Ford Town</p>
+    <h3 class="s-name">Vargeld</h3>
+    <p class="s-desc">Exists because the river is crossable here and nowhere else for forty miles in either direction. Whoever holds Vargeld controls movement through the region. Currently held by Kelnvar. The garrison here is larger than the town's size would suggest and everyone understands why.</p>
+    <span class="s-tag gold">Strategic Ford</span>
+  </div>
+
+  <div class="settlement-card kelnvar reveal">
+    <p class="s-type">Farming Village</p>
+    <h3 class="s-name">Ostren</h3>
+    <p class="s-desc">No walls, no garrison, no particular defenses. Wide plain, good farming. Sends its young men to the war and waits to see how many come back. Unremarkable and quietly important because it feeds people. The village elder has started counting the empty houses.</p>
+    <span class="s-tag">Southern Kelnvar</span>
+  </div>
+
+</div>
+
+<div class="ornamental-rule reveal"><span>✦</span></div>
+
+<!-- STRELNOV -->
+<div class="contested-region reveal">
+  <h3>Strelnov</h3>
+  <p>The silver region. Sits on the border between Dravek and Kelnvar in a configuration that both kingdoms have found legally convenient to dispute for the better part of three generations. The mines themselves occupy the most contested ground — the exact point where the border is most argued about and most actively fought over.</p>
+  <p>Both kingdoms have settlements inside Strelnov that they currently hold or have recently lost. The region changes hands by degrees — a village here, a ridge line there, a mine entrance retaken and lost again within the same month. It is not a place anyone chooses to live if they can avoid it.</p>
+  <p>The silver does not care who owns it. It simply sits in the rock and waits.</p>
+</div>
+
+<!-- WILDERNESS -->
+<div class="reveal">
+  <p class="section-label">Beyond the Roads</p>
+  <h2 class="section-title">The Wilderness</h2>
+  <p class="section-intro">The settlements are connected by roads. Between the roads is everything that was here before the kingdoms arrived, and will be here after. Three regions are named below because they are large enough and dangerous enough to warrant names. What they contain has never been fully documented.</p>
+</div>
+
+<div class="wilderness-grid">
+
+  <div class="wild-card reveal">
+    <h3 class="wild-name">The Drevwald</h3>
+    <p class="wild-desc">A massive forest spanning the northern border of both kingdoms. Neither Dravek nor Kelnvar fully claims it. Logging operations work the edges. Nobody goes deep into the Drevwald without a reason, and most people who go deep with a reason do not come back with the reason satisfied.</p>
+    <p class="wild-desc">The last formal survey of the Drevwald interior was conducted forty years ago. The party returned incomplete. The report was filed and has not been acted upon.</p>
+    <div class="wild-warning">Neither kingdom claims it. Neither kingdom will explain why.</div>
+  </div>
+
+  <div class="wild-card reveal">
+    <h3 class="wild-name">The Greymarch</h3>
+    <p class="wild-desc">Highland region northeast of Strelnov. Rocky, cold, poor farming, thin roads that become impassable in winter. Shepherds use the lower reaches in summer. In winter it is effectively empty of human presence.</p>
+    <p class="wild-desc">The Greymarch is where the field reports place the origin of the incident. What lives in the high passes has never been catalogued. What descended from those passes is currently the subject of urgent correspondence between every capital in the seven kingdoms.</p>
+    <div class="wild-warning">Do not travel the upper Greymarch alone. Do not travel it at all if it can be avoided.</div>
+  </div>
+
+  <div class="wild-card reveal">
+    <h3 class="wild-name">The Flathen</h3>
+    <p class="wild-desc">Open agricultural lowlands between several southern settlements. Not wilderness in the traditional sense — the land is farmable and partly farmed. But it is sparsely populated, the sight lines are long, and there is nowhere to shelter when something comes across the plain toward you.</p>
+    <p class="wild-desc">Armies move through the Flathen because the ground is good for horses and there are no natural defensive positions to slow an advance. This is also why nobody wants to live in the middle of it.</p>
+    <div class="wild-warning">Open ground. No cover. Everything can see you.</div>
+  </div>
+
+</div>
+```
+
+  </div>
+
+</main>
+
+<footer>
+  <p>Blood &amp; Iron &mdash; The Seven Kingdoms &mdash; A Community Lore Setting</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.06 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
