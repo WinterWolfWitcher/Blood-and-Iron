@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bestiary — Blood &amp; Iron</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.creature-entry { background-color:#221c15; border:1px solid #3d3020; margin-bottom:3rem; overflow:hidden; }
+.creature-header { padding:2.5rem 2.5rem 1.5rem; border-bottom:1px solid #3d3020; }
+.creature-classification { font-family:'Cinzel',Georgia,serif; font-size:0.62rem; letter-spacing:0.35em; text-transform:uppercase; color:#6b5d4f; margin-bottom:0.5rem; }
+.creature-name { font-family:'Cinzel Decorative',Georgia,serif; font-size:1.8rem; color:#e8dcc8; margin-bottom:0.5rem; }
+.creature-status { display:inline-block; font-family:'Cinzel',Georgia,serif; font-size:0.58rem; letter-spacing:0.25em; text-transform:uppercase; padding:0.3rem 0.8rem; border:1px solid; margin-bottom:0; }
+.creature-status.confirmed { color:#c0392b; border-color:#8b1a1a; background-color:rgba(139,26,26,0.1); }
+.creature-status.rare      { color:#c9a84c; border-color:#7a6030; background-color:rgba(201,168,76,0.05); }
+.creature-status.uncommon  { color:#a89880; border-color:#3d3020; }
+.creature-status.natural   { color:#6b5d4f; border-color:#3d3020; }
+
+.creature-body { padding:2rem 2.5rem; }
+.creature-body p { color:#a89880; font-size:1.05rem; line-height:1.75; margin-bottom:1.1rem; max-width:760px; }
+.creature-body p:last-child { margin-bottom:0; }
+
+.creature-stats { display:flex; gap:1.5rem; flex-wrap:wrap; padding:1.5rem 2.5rem; border-top:1px solid #3d3020; background-color:rgba(0,0,0,0.15); }
+.stat { display:flex; flex-direction:column; gap:0.2rem; }
+.stat-label { font-family:‘Cinzel’,Georgia,serif; font-size:0.56rem; letter-spacing:0.3em; text-transform:uppercase; color:#6b5d4f; }
+.stat-value { font-family:‘Cinzel’,Georgia,serif; font-size:0.82rem; color:#e8dcc8; }
+
+.section-divider { margin:4rem 0 2rem; }
+
+.dire-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1.2rem; margin-top:2rem; }
+.dire-card { background-color:#2e2418; border:1px solid #3d3020; padding:1.5rem; }
+.dire-name { font-family:‘Cinzel’,Georgia,serif; font-size:0.9rem; letter-spacing:0.1em; color:#e8dcc8; margin-bottom:0.5rem; }
+.dire-desc { color:#6b5d4f; font-size:0.9rem; line-height:1.6; }
+
+.intro-note { background-color:#2e2418; border:1px solid #3d3020; border-left:3px solid #2d5a2d; padding:2rem 2.5rem; margin-bottom:4rem; }
+.intro-note-label { font-family:‘Cinzel’,Georgia,serif; font-size:0.65rem; letter-spacing:0.3em; text-transform:uppercase; color:#6b5d4f; margin-bottom:0.75rem; }
+.intro-note p { color:#a89880; font-size:1rem; }
+</style>
+
+</head>
+<body>
+<header>
+  <nav><ul>
+    <li><a href="index.html">The World</a></li>
+    <li><a href="kingdoms.html">Kingdoms</a></li>
+    <li><a href="geography.html">Geography</a></li>
+    <li><a href="conflict.html">The Conflict</a></li>
+    <li><a href="faith.html">The Faith</a></li>
+    <li><a href="magic.html">Magic</a></li>
+    <li><a href="bestiary.html" class="active">Bestiary</a></li>
+  </ul></nav>
+</header>
+<main>
+  <div class="page-header">
+    <p class="page-eyebrow">Creatures of the World</p>
+    <h1 class="page-title">Bestiary</h1>
+    <p class="page-subtitle">What lives in the wilderness between settlements. What the Church said was superstition. What is not.</p>
+  </div>
+  <div class="content-wrapper">
+
+```
+<div class="intro-note reveal">
+  <p class="intro-note-label">A Note on Sources</p>
+  <p>The entries below are compiled from field reports, eyewitness accounts, and older documents that were previously classified as folklore. Classification status reflects current confirmed sightings. The Church has not issued updated guidance on any of these entries. Treat all of them as potentially active in the wilderness regions and act accordingly.</p>
+</div>
+
+<!-- DRAGON -->
+<div class="creature-entry reveal">
+  <div class="creature-header">
+    <p class="creature-classification">Apex — Confirmed Sighting</p>
+    <h2 class="creature-name">Dragon</h2>
+    <span class="creature-status confirmed">Confirmed — Greymarch Incident</span>
+  </div>
+  <div class="creature-body">
+    <p>Four limbs total. The front two are the wings — large, membranous, structured on an elongated arm and finger anatomy. When on the ground it walks on the wrist joints of those wings, the folded membranes angling back. The rear legs are heavier and more muscular. The body plan is not that of a flying reptile with added wings — it is a creature whose forelimbs became the wings entirely, which means it is built differently from the ground up.</p>
+    <p>Scale comparable to a heavy warhorse for prey selection, possibly larger. Skull heavily plated with calcified, overlapping scale armor thickest at the head and shoulders. Multiple forward-curving horns at the skull. The scales overall have a calcified, layered quality — not smooth, more like stacked armor than skin. Coloration dark.</p>
+    <p>Fire mechanism is a dual-chemical system housed behind the jaw — two separate compounds that combust on contact when combined. The fire is not breathed in the way air is breathed; it is produced by the mixing of the two compounds at the point of release. The throat and jaw are one of the few soft points on the animal.</p>
+    <p>Intelligence is animal, not calculating. It is territorial and opportunistic. It does not pursue tactical objectives. It appeared over a battlefield, burned what was beneath it without distinguishing between sides, took a horse that was likely visible and available, and departed. It was not making a point. It was eating.</p>
+    <p>Soft points: wing membranes, throat, underbelly. Everything else is armored to a degree that standard military arms will struggle with. There are currently no documented successful engagements with a live adult specimen.</p>
+  </div>
+  <div class="creature-stats">
+    <div class="stat"><span class="stat-label">Size</span><span class="stat-value">Very large — warhorse scale</span></div>
+    <div class="stat"><span class="stat-label">Intelligence</span><span class="stat-value">Animal — territorial</span></div>
+    <div class="stat"><span class="stat-label">Threat</span><span class="stat-value">Extreme</span></div>
+    <div class="stat"><span class="stat-label">Habitat</span><span class="stat-value">Greymarch highlands</span></div>
+    <div class="stat"><span class="stat-label">Status</span><span class="stat-value">Active — confirmed</span></div>
+  </div>
+</div>
+
+<!-- GRIFFIN -->
+<div class="creature-entry reveal">
+  <div class="creature-header">
+    <p class="creature-classification">Apex — Rare</p>
+    <h2 class="creature-name">Griffin</h2>
+    <span class="creature-status rare">Rare — Greymarch nesting</span>
+  </div>
+  <div class="creature-body">
+    <p>Eagle head and wings, lion body and hindquarters, horse-sized overall. Nests in high terrain — the Greymarch upper passes are confirmed nesting ground based on older accounts that are now being revisited with more seriousness. Occasionally sighted at the edges of the wilderness near settlements, particularly during lean seasons when prey in the high country is scarce.</p>
+    <p>Cannot be tamed. This is not a training failure or a matter of patience — it is instinct. A griffin raised from hatching by human hands will, at maturity, categorize those human hands as prey. The instinct does not distinguish between someone who raised it and someone it has never met. Handlers who have attempted long-term domestication have not survived the attempt.</p>
+    <p>Aerial predator. Talons are the primary weapon. Fast in a dive. Dangerous at range because it strikes from above before most ground-based threats can respond.</p>
+  </div>
+  <div class="creature-stats">
+    <div class="stat"><span class="stat-label">Size</span><span class="stat-value">Horse-sized</span></div>
+    <div class="stat"><span class="stat-label">Intelligence</span><span class="stat-value">Animal — predatory instinct</span></div>
+    <div class="stat"><span class="stat-label">Threat</span><span class="stat-value">High</span></div>
+    <div class="stat"><span class="stat-label">Habitat</span><span class="stat-value">High terrain — Greymarch</span></div>
+    <div class="stat"><span class="stat-label">Domestication</span><span class="stat-value">Not possible</span></div>
+  </div>
+</div>
+
+<!-- TROLL -->
+<div class="creature-entry reveal">
+  <div class="creature-header">
+    <p class="creature-classification">Large — Wilderness</p>
+    <h2 class="creature-name">Troll</h2>
+    <span class="creature-status uncommon">Uncommon — wilderness regions</span>
+  </div>
+  <div class="creature-body">
+    <p>Eight to nine feet tall with a pronounced disproportion between upper and lower body — massive chest, shoulders, and arms relative to shorter, thicker legs. The posture is forward-leaning. The weight distribution is toward the front. It hits hard and it hits from close range.</p>
+    <p>The back, shoulders, and skull accumulate calcium deposits over the creature's lifespan, building up a natural armor that reads as rocky or stony at a distance. Fresh calcium is pale and relatively thin. Old calcium is thick, grey, and extremely resistant to cutting weapons. The face, chest, stomach, throat, and legs do not have this armor — those are the soft points.</p>
+    <p>Regeneration that is extraordinary by any standard short of divine. Wounds that would kill most creatures close over the course of minutes. Severed limbs are documented as reattaching if kept close to the body. Fire disrupts regeneration — burns do not close at the same rate as cuts and punctures. This is known. Troll hunters use fire.</p>
+    <p>Intelligence is present but limited. It hunts actively, remembers territory, knows fire is dangerous. It does not plan beyond the immediate. It does not use tools. It does not coordinate with others of its kind. What it does is find prey, approach it, and outlast it — and it has the regeneration to make outlasting a viable strategy against most threats.</p>
+  </div>
+  <div class="creature-stats">
+    <div class="stat"><span class="stat-label">Size</span><span class="stat-value">8–9 feet, heavily built</span></div>
+    <div class="stat"><span class="stat-label">Intelligence</span><span class="stat-value">Low — active hunter</span></div>
+    <div class="stat"><span class="stat-label">Threat</span><span class="stat-value">Very high — regeneration</span></div>
+    <div class="stat"><span class="stat-label">Weakness</span><span class="stat-value">Fire — slows regeneration</span></div>
+    <div class="stat"><span class="stat-label">Soft points</span><span class="stat-value">Face, chest, throat, legs</span></div>
+  </div>
+</div>
+
+<!-- HARPY -->
+<div class="creature-entry reveal">
+  <div class="creature-header">
+    <p class="creature-classification">Aerial — Colonial</p>
+    <h2 class="creature-name">Harpy</h2>
+    <span class="creature-status uncommon">Present — wilderness and cliff terrain</span>
+  </div>
+  <div class="creature-body">
+    <p>Large wingspan, built for soaring and gliding rather than sustained powered flight. The body plan is avian — condor or large hawk proportions, feathered, talons as the primary weapon. The head is where it diverges from natural birds: a human female face, flat, forward-facing eyes set wide with no visible whites, and a mouth that opens wider than a human jaw permits. A feather crown that reads as hair at any distance. The face is what people remember and what makes them hesitate, which is part of how it works.</p>
+    <p>Inflatable pectoral air sacs are present in both sexes and read, at a distance, as human female anatomy. Combined with the facial structure, a harpy observed from below or at range is frequently misidentified as a human figure in the air. By the time the neck moves wrong — too long, flexing in the wrong direction — it is typically too late to avoid the engagement.</p>
+    <p>Replicates human speech. This is not conscious mimicry or communication — it is instinct, the same mechanism that allows certain birds to reproduce environmental sounds. A harpy calling from cover may produce words, names, or cries for help that it has absorbed from proximity to human settlements. It does not understand what it is producing. The effect on the people who hear it is not diminished by this fact.</p>
+    <p>Colonial. Roosts in groups, establishes hierarchies, mobs threats near nesting sites in coordinated numbers. A single harpy is dangerous. A colony defending a nest site is a different problem entirely.</p>
+  </div>
+  <div class="creature-stats">
+    <div class="stat"><span class="stat-label">Size</span><span class="stat-value">Large wingspan — human-bodied</span></div>
+    <div class="stat"><span class="stat-label">Intelligence</span><span class="stat-value">Animal — colonial hierarchy</span></div>
+    <div class="stat"><span class="stat-label">Threat</span><span class="stat-value">High — especially in groups</span></div>
+    <div class="stat"><span class="stat-label">Habitat</span><span class="stat-value">Cliff terrain — wilderness edges</span></div>
+    <div class="stat"><span class="stat-label">Warning</span><span class="stat-value">Mimics human speech</span></div>
+  </div>
+</div>
+
+<!-- GOBLIN -->
+<div class="creature-entry reveal">
+  <div class="creature-header">
+    <p class="creature-classification">Swarm — Cave-Dwelling</p>
+    <h2 class="creature-name">Goblin</h2>
+    <span class="creature-status uncommon">Present — caves and underground</span>
+  </div>
+  <div class="creature-body">
+    <p>Range from dog-sized to small-adolescent-sized depending on age and local variation. Fast. Feral. No language. They communicate in the way pack animals communicate — sound and proximity and established hierarchy — but there is no speech and no apparent capacity for it.</p>
+    <p>Intelligence scales with group size in a way that is not fully understood. A single goblin is manageable — aggressive, fast, and not particularly tactical about it. Five goblins are a coordinated problem. Ten or more, and you are dealing with something that digs pitfalls, sets ambushes, sends scouts ahead, and has had time to map the terrain you are walking through.</p>
+    <p>Nocturnal. Cave-dwelling. They do not operate effectively in full daylight — the eyes are adapted for low light. They do not pursue above ground into open terrain in daylight hours. They will pursue at dusk. They will pursue at night with complete comfort and the territorial knowledge of a creature that has lived in the ground for its entire life.</p>
+    <p>The danger with goblins is almost always the ones you did not see. You saw three. There are fourteen.</p>
+  </div>
+  <div class="creature-stats">
+    <div class="stat"><span class="stat-label">Size</span><span class="stat-value">Dog to small-adolescent</span></div>
+    <div class="stat"><span class="stat-label">Intelligence</span><span class="stat-value">Scales with colony size</span></div>
+    <div class="stat"><span class="stat-label">Threat</span><span class="stat-value">Low alone — high in numbers</span></div>
+    <div class="stat"><span class="stat-label">Habitat</span><span class="stat-value">Caves — underground</span></div>
+    <div class="stat"><span class="stat-label">Activity</span><span class="stat-value">Nocturnal</span></div>
+  </div>
+</div>
+
+<!-- WEREWOLF -->
+<div class="creature-entry reveal">
+  <div class="creature-header">
+    <p class="creature-classification">Infectious — Transformation</p>
+    <h2 class="creature-name">Werewolf</h2>
+    <span class="creature-status uncommon">Rare — blood vector transmission</span>
+  </div>
+  <div class="creature-body">
+    <p>Transmission is through blood — a bite that breaks skin from an infected individual is sufficient. The transformation does not happen immediately. It progresses over weeks. Early stage presents as fever, behavioral changes, and heightened sensitivity to light and sound. The blood vessels in the eyes and mouth become fragile and surface-close; they rupture easily under emotional stress or physical exertion, producing visible bleeding at the eyes and mouth in someone who has not yet fully transformed. This is one of the few early diagnostic signs.</p>
+    <p>Full form is bipedal. The human torso remains as a structural suggestion — the shoulders, the general upright posture — but the wolf anatomy dominates. Larger than a natural wolf by significant margin. Proportions are wrong by human standards and wrong by wolf standards simultaneously. It occupies a body plan that belongs entirely to neither.</p>
+    <p>Whether any individual retains themselves through and after transformation is deliberately unclear. Some accounts suggest retained memory with no retained control. Some suggest retained control with gradually eroding identity. Some suggest complete replacement. The question of what remains of the person inside the creature is the question that matters most to the people closest to an early-stage case, and it is the question with the least reliable answer.</p>
+    <p>It eats meat. It kills messily. It cleans afterward — the mouth, the hands, with a deliberateness that is more disturbing to witnesses than the killing was.</p>
+  </div>
+  <div class="creature-stats">
+    <div class="stat"><span class="stat-label">Transmission</span><span class="stat-value">Blood — bite</span></div>
+    <div class="stat"><span class="stat-label">Transformation</span><span class="stat-value">Weeks — gradual progression</span></div>
+    <div class="stat"><span class="stat-label">Early signs</span><span class="stat-value">Fever, light sensitivity, eye bleeding</span></div>
+    <div class="stat"><span class="stat-label">Threat</span><span class="stat-value">Very high — infectious</span></div>
+    <div class="stat"><span class="stat-label">Reversibility</span><span class="stat-value">Unknown — one-way door likely</span></div>
+  </div>
+</div>
+
+<!-- VAMPIRE -->
+<div class="creature-entry reveal">
+  <div class="creature-header">
+    <p class="creature-classification">Infectious — Transformation</p>
+    <h2 class="creature-name">Vampire</h2>
+    <span class="creature-status uncommon">Rare — nocturnal, cave-roosting</span>
+  </div>
+  <div class="creature-body">
+    <p>Same infection logic as the werewolf — blood vector, bite transmission, gradual transformation over time rather than immediate. Early signs share some overlap: the skin begins to grey and tighten. The ears lengthen and sharpen at the point. Claws develop at the fingertips. The face begins restructuring toward a bat anatomy — the nose flattening and widening, the ears continuing to grow, the jaw elongating.</p>
+    <p>Intermediate stage: skin fully grey, thin membrane growing from the arms toward the torso, dark fur appearing at the extremities. Late and full form is a bipedal bat anatomy — large functional wings structured from the elongated arm bones, grey mottled skin, dark fur through the body, echolocation fully developed and operational. The end state is fully feral. Whatever the person was is not accessible from that point forward.</p>
+    <p>Nocturnal. Roosts in caves and ruined structures during daylight hours. The echolocation is sensitive and directional — a vampire navigating in complete darkness is as effective as a human in daylight. Needs both meat and blood; it kills in the way a predator kills but it laps blood from the wound with a deliberateness that is clearly purposeful rather than incidental.</p>
+    <p>Does not coordinate with others of its kind in the way goblins do. Solitary to loosely territorial. Multiple vampires in the same location are not cooperating — they are competing for the same resources and tolerating the proximity.</p>
+  </div>
+  <div class="creature-stats">
+    <div class="stat"><span class="stat-label">Transmission</span><span class="stat-value">Blood — bite</span></div>
+    <div class="stat"><span class="stat-label">Final form</span><span class="stat-value">Bipedal bat — fully feral</span></div>
+    <div class="stat"><span class="stat-label">Activity</span><span class="stat-value">Strictly nocturnal</span></div>
+    <div class="stat"><span class="stat-label">Habitat</span><span class="stat-value">Caves — ruins</span></div>
+    <div class="stat"><span class="stat-label">Threat</span><span class="stat-value">Very high — infectious, fast</span></div>
+  </div>
+</div>
+
+<!-- LAMIA -->
+<div class="creature-entry reveal">
+  <div class="creature-header">
+    <p class="creature-classification">Serpentine — Intelligent</p>
+    <h2 class="creature-name">Lamia</h2>
+    <span class="creature-status rare">Rare — solitary — deliberate hunters</span>
+  </div>
+  <div class="creature-body">
+    <p>Fully human female upper body, indistinguishable from a human woman at distance. The transition begins at the hip — the human skeletal structure fades into a serpentine body that is three to four times the length of the human portion and proportionally massive. The kill mechanism is constriction. The human upper body is not the weapon. It is the lure.</p>
+    <p>The Lamia is intelligent. It speaks human languages. It sets traps by choice — not by instinct, but by decision. It selects a position, identifies an approach route, and presents the human upper body to travelers at a distance and angle that delays recognition of what the rest of the body is doing. By the time the coil is in position, the encounter is already over.</p>
+    <p>Solitary as a rule. Occasional sister clutches — two or three sharing territory by choice rather than necessity, which suggests a social capacity that solitary individuals do not demonstrate. Capable of self-reproduction through a hermaphroditic mechanism; consistent males are not documented. Lays eggs. Young are fully serpentine at hatching and remain so through early development.</p>
+    <p>Not always immediately hostile. There are documented accounts of brief exchanges — even extended conversations — before an encounter turned lethal, and documented accounts of encounters that did not turn lethal at all. The Lamia's decision-making process in these cases is not well understood. Do not assume that the absence of immediate attack means safety.</p>
+  </div>
+  <div class="creature-stats">
+    <div class="stat"><span class="stat-label">Upper body</span><span class="stat-value">Human female — fully convincing</span></div>
+    <div class="stat"><span class="stat-label">Lower body</span><span class="stat-value">Constrictor — 3–4x human length</span></div>
+    <div class="stat"><span class="stat-label">Intelligence</span><span class="stat-value">High — deliberate, linguistic</span></div>
+    <div class="stat"><span class="stat-label">Social</span><span class="stat-value">Solitary — occasional sister clutches</span></div>
+    <div class="stat"><span class="stat-label">Threat</span><span class="stat-value">Extreme — intelligent ambush predator</span></div>
+  </div>
+</div>
+
+<!-- ARACHNE -->
+<div class="creature-entry reveal">
+  <div class="creature-header">
+    <p class="creature-classification">Arachnid — Intelligent</p>
+    <h2 class="creature-name">Arachne</h2>
+    <span class="creature-status rare">Rare — strictly solitary</span>
+  </div>
+  <div class="creature-body">
+    <p>Where a spider's anterior body would be, the Arachne has a complete human female upper body. The pedipalps of the spider anatomy have become vestigial structures at the junction. The spider body is three to four times the size of the human portion, with eight legs and a posterior egg sac. The human half is anatomically complete and presents as human at range and in partial concealment.</p>
+    <p>Born fully spider — small, tarantula-scale at hatching. The human half begins developing at an equivalent developmental age of around twelve, with the full emergence of the human portion taking three to five years. Maturity at the equivalent of seventeen to eighteen. Lifespan extends well beyond human norms. Up to ten clutches in a lifetime, approximately five hundred eggs per clutch, with approximately three hundred surviving the clutch period through sibling competition within the egg sac.</p>
+    <p>Strictly solitary. Isolationist. Will not share territory. Encounters two Arachne occupying the same territory means one arrived recently and the other is aware of this, and one of those situations will resolve itself. The social capacity that Lamia occasionally demonstrate is entirely absent here.</p>
+    <p>Intelligent. Speaks human languages. The intelligence and linguistic ability are present but the social structure to apply them cooperatively is not. An Arachne may converse. It will not coordinate.</p>
+  </div>
+  <div class="creature-stats">
+    <div class="stat"><span class="stat-label">Upper body</span><span class="stat-value">Human female — complete</span></div>
+    <div class="stat"><span class="stat-label">Lower body</span><span class="stat-value">Spider — 3–4x upper body size</span></div>
+    <div class="stat"><span class="stat-label">Intelligence</span><span class="stat-value">High — linguistic</span></div>
+    <div class="stat"><span class="stat-label">Social</span><span class="stat-value">Strictly solitary — isolationist</span></div>
+    <div class="stat"><span class="stat-label">Threat</span><span class="stat-value">High — intelligent, territorial</span></div>
+  </div>
+</div>
+
+<div class="ornamental-rule reveal"><span>✦</span></div>
+
+<!-- DIRE -->
+<div class="reveal">
+  <p class="section-label">Natural Variants</p>
+  <h2 class="section-title">Dire &amp; Giant Variants</h2>
+  <p class="section-intro">Scaled-up versions of natural animals. No supernatural component beyond size. Dangerous by proportion — a bear that stands twelve feet at the shoulder does not require magic to be a problem.</p>
+</div>
+
+<div class="dire-grid">
+  <div class="dire-card reveal">
+    <h3 class="dire-name">Giant Snake</h3>
+    <p class="dire-desc">Constrictor or venomous — both variants documented at sizes significantly beyond natural scale. Wilderness regions, particularly the Drevwald. Kill mechanism unchanged from natural snakes, simply scaled.</p>
+  </div>
+  <div class="dire-card reveal">
+    <h3 class="dire-name">Dire Wolf</h3>
+    <p class="dire-desc">Pack hunter scaled above natural wolf proportions. Still operates in pack social structure. Still hunts the same prey — livestock, travelers, the injured and isolated. Larger and harder to drive off.</p>
+  </div>
+  <div class="dire-card reveal">
+    <h3 class="dire-name">Dire Bear</h3>
+    <p class="dire-desc">Solitary. Territorial. Significantly larger than a natural bear. The natural bear is already a serious threat. The scaled version is an encounter that requires a group with proper arms to resolve without casualties.</p>
+  </div>
+  <div class="dire-card reveal">
+    <h3 class="dire-name">Giant Spider</h3>
+    <p class="dire-desc">Web-building or hunting variants at body sizes that make them viable predators against humans rather than insects. Wilderness regions and cave systems. No intelligence beyond natural spider instinct — purely an issue of scale.</p>
+  </div>
+</div>
+```
+
+  </div>
+</main>
+<footer><p>Blood &amp; Iron &mdash; The Seven Kingdoms &mdash; A Community Lore Setting</p></footer>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.04 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
