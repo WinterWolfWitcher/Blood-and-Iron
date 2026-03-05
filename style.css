@@ -1,0 +1,352 @@
+/* ── RESET & BASE ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  background-color: #1a1410;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1a1410 !important;
+  color: #e8dcc8;
+  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── CSS VARIABLES ── */
+:root {
+  --parchment: #1a1410;
+  --parchment-mid: #221c15;
+  --parchment-light: #2e2418;
+  --ink: #e8dcc8;
+  --ink-faded: #a89880;
+  --ink-dim: #6b5d4f;
+  --red: #8b1a1a;
+  --red-bright: #c0392b;
+  --blue: #1a3a5c;
+  --blue-bright: #2980b9;
+  --gold: #c9a84c;
+  --gold-dim: #7a6030;
+  --green: #2d5a2d;
+  --border: #3d3020;
+}
+
+/* ── GRAIN TEXTURE ── */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+}
+
+/* ── HEADER & NAV ── */
+header {
+  background-color: #221c15;
+  border-bottom: 1px solid #3d3020;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header nav a {
+  display: block;
+  padding: 0.9rem 1rem;
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #a89880;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background-color: #c9a84c;
+  transition: left 0.3s ease, right 0.3s ease;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: #c9a84c;
+}
+
+header nav a:hover::after,
+header nav a.active::after {
+  left: 0.5rem;
+  right: 0.5rem;
+}
+
+/* ── PAGE HEADER ── */
+.page-header {
+  padding: 5rem 2rem 3rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #3d3020;
+  background-color: #1a1410;
+}
+
+.page-eyebrow {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 1rem;
+}
+
+.page-title {
+  font-family: 'Cinzel Decorative', Georgia, serif;
+  font-size: 3rem;
+  color: #e8dcc8;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  color: #a89880;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── CONTENT ── */
+.content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.section-label {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: 'Cinzel Decorative', Georgia, serif;
+  font-size: 2.2rem;
+  color: #e8dcc8;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.section-intro {
+  color: #a89880;
+  max-width: 720px;
+  margin-bottom: 3rem;
+  font-size: 1.05rem;
+}
+
+/* ── CARDS ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #221c15;
+  border: 1px solid #3d3020;
+  padding: 1.75rem;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #7a6030;
+}
+
+.card-type {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #6b5d4f;
+  margin-bottom: 0.5rem;
+}
+
+.card-name {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.1rem;
+  color: #e8dcc8;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.card-desc {
+  font-size: 0.95rem;
+  color: #a89880;
+  line-height: 1.65;
+}
+
+.card-tag {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #3d3020;
+  color: #6b5d4f;
+}
+
+.card-tag.alert {
+  border-color: #8b1a1a;
+  color: #c0392b;
+}
+
+.card-tag.highlight {
+  border-color: #7a6030;
+  color: #c9a84c;
+}
+
+/* ── SPECIAL BLOCKS ── */
+.callout-block {
+  background-color: #221c15;
+  border: 1px solid #3d3020;
+  border-left: 3px solid #8b1a1a;
+  padding: 2.5rem;
+  margin: 3rem 0;
+  position: relative;
+}
+
+.callout-block .callout-label {
+  position: absolute;
+  top: -0.65rem;
+  left: 2rem;
+  background-color: #221c15;
+  padding: 0 0.75rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #c0392b;
+}
+
+.callout-block p {
+  color: #a89880;
+  margin-bottom: 1rem;
+}
+
+.callout-block p:last-child { margin-bottom: 0; }
+
+.quote-block {
+  background-color: #2e2418;
+  border: 1px solid #3d3020;
+  padding: 2.5rem;
+  margin: 3rem 0;
+}
+
+.quote-block blockquote {
+  font-style: italic;
+  color: #a89880;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  padding-left: 2rem;
+  border-left: 2px solid #7a6030;
+}
+
+.quote-block cite {
+  display: block;
+  margin-top: 1rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #6b5d4f;
+  font-style: normal;
+}
+
+/* ── DIVIDERS ── */
+.ornamental-rule {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 4rem auto;
+  max-width: 1100px;
+  padding: 0 2rem;
+  opacity: 0.5;
+}
+
+.ornamental-rule::before,
+.ornamental-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #7a6030;
+}
+
+.ornamental-rule span {
+  font-family: 'Cinzel Decorative', Georgia, serif;
+  font-size: 1rem;
+  color: #7a6030;
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid #3d3020;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #6b5d4f;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  background-color: #1a1410;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .page-title { font-size: 2rem; }
+  .section-title { font-size: 1.6rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  header nav a { padding: 0.75rem 0.6rem; font-size: 0.58rem; }
+}
