@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Conflict — Blood &amp; Iron</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.prose-block { max-width:740px; color:#a89880; font-size:1.05rem; }
+.prose-block p { margin-bottom:1.2rem; }
+.prose-block p:last-child { margin-bottom:0; }
+
+.timeline { margin:3rem 0; }
+.timeline-item { display:flex; gap:2rem; margin-bottom:2.5rem; align-items:flex-start; }
+.timeline-marker { flex-shrink:0; display:flex; flex-direction:column; align-items:center; gap:0; }
+.timeline-dot { width:12px; height:12px; background-color:#c9a84c; transform:rotate(45deg); flex-shrink:0; margin-top:0.35rem; }
+.timeline-line { width:1px; height:100%; min-height:40px; background:linear-gradient(to bottom,#7a6030,transparent); margin-top:4px; }
+.timeline-content h3 { font-family:‘Cinzel’,Georgia,serif; font-size:0.85rem; letter-spacing:0.1em; color:#e8dcc8; margin-bottom:0.5rem; }
+.timeline-content p { color:#a89880; font-size:0.95rem; line-height:1.65; }
+
+.incident-full { background-color:#221c15; border:1px solid rgba(139,26,26,0.5); padding:3rem; margin:3rem 0; position:relative; }
+.incident-full::before { content:‘The Greymarch Incident’; position:absolute; top:-0.65rem; left:2rem; background-color:#221c15; padding:0 0.75rem; font-family:‘Cinzel’,Georgia,serif; font-size:0.62rem; letter-spacing:0.3em; text-transform:uppercase; color:#c0392b; }
+
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin:2rem 0; }
+.faction-block { background-color:#2e2418; border:1px solid #3d3020; padding:2rem; }
+.faction-block.dravek { border-top:3px solid #8b1a1a; }
+.faction-block.kelnvar { border-top:3px solid #8b7a1a; }
+.faction-name { font-family:‘Cinzel’,Georgia,serif; font-size:1rem; letter-spacing:0.1em; color:#e8dcc8; margin-bottom:1rem; }
+.faction-body { color:#a89880; font-size:0.95rem; line-height:1.65; }
+
+.status-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; margin:2rem 0; }
+.status-item { background-color:#2e2418; border:1px solid #3d3020; padding:1.25rem; }
+.status-label { font-family:‘Cinzel’,Georgia,serif; font-size:0.58rem; letter-spacing:0.3em; text-transform:uppercase; color:#6b5d4f; margin-bottom:0.4rem; }
+.status-value { font-family:‘Cinzel’,Georgia,serif; font-size:0.9rem; color:#e8dcc8; }
+
+@media(max-width:600px) { .two-col { grid-template-columns:1fr; } }
+</style>
+
+</head>
+<body>
+<header>
+  <nav><ul>
+    <li><a href="index.html">The World</a></li>
+    <li><a href="kingdoms.html">Kingdoms</a></li>
+    <li><a href="geography.html">Geography</a></li>
+    <li><a href="conflict.html" class="active">The Conflict</a></li>
+    <li><a href="faith.html">The Faith</a></li>
+    <li><a href="magic.html">Magic</a></li>
+    <li><a href="bestiary.html">Bestiary</a></li>
+  </ul></nav>
+</header>
+<main>
+  <div class="page-header">
+    <p class="page-eyebrow">War &amp; Politics</p>
+    <h1 class="page-title">The Conflict</h1>
+    <p class="page-subtitle">Two kingdoms. One silver region. Eight months of active engagement and no end in sight — until the sky introduced a third party.</p>
+  </div>
+  <div class="content-wrapper">
+
+```
+<div class="reveal">
+  <p class="section-label">Origins</p>
+  <h2 class="section-title">Why They're Fighting</h2>
+  <div class="prose-block">
+    <p>The war between Dravek and Kelnvar did not begin with the current engagement. It did not begin eight months ago, or two years ago, or even with the generation that is currently fighting it. It began, in the way most wars between neighbors begin, with a marriage, a disputed inheritance, and a piece of land that both sides had reason to want.</p>
+    <p>The land in question is Strelnov — a border region that would be unremarkable farmland except that it sits on top of significant silver deposits. Silver funds armies. Silver funds everything. Whoever controls the Strelnov mines controls enough revenue to prosecute a war indefinitely, which is why the war over Strelnov has been prosecuted indefinitely.</p>
+    <p>The legal argument is as follows: Kelnvar holds that Strelnov was transferred to their domain through a marriage contract three generations ago. Dravek holds that the transfer was conditional and the conditions were never met. Both sides have documents. Both sides have lawyers. Both sides have stopped listening to the lawyers and started listening to their generals.</p>
+    <p>The common people living in Strelnov have not been asked their opinion. They are aware of this.</p>
+  </div>
+</div>
+
+<div class="ornamental-rule reveal"><span>✦</span></div>
+
+<div class="reveal">
+  <p class="section-label">The Current Engagement</p>
+  <h2 class="section-title">State of the War</h2>
+</div>
+
+<div class="status-grid reveal">
+  <div class="status-item">
+    <p class="status-label">Duration</p>
+    <p class="status-value">8–11 months active</p>
+  </div>
+  <div class="status-item">
+    <p class="status-label">Current advantage</p>
+    <p class="status-value">Kelnvar</p>
+  </div>
+  <div class="status-item">
+    <p class="status-label">Pattern</p>
+    <p class="status-value">Tug of war</p>
+  </div>
+  <div class="status-item">
+    <p class="status-label">Prize</p>
+    <p class="status-value">Strelnov silver mines</p>
+  </div>
+  <div class="status-item">
+    <p class="status-label">Complication</p>
+    <p class="status-value">Greymarch incident</p>
+  </div>
+  <div class="status-item">
+    <p class="status-label">Resolution</p>
+    <p class="status-value">Unknown</p>
+  </div>
+</div>
+
+<div class="prose-block reveal" style="margin-top:1rem;">
+  <p>The war does not move in one direction. It moves like a rope in a tug of war — one side gains ground, then the other pushes back and reclaims it. A village changes hands. A ridge line is taken and lost in the same month. A mine entrance is seized, held for three weeks, and retaken. The front is not a line, it is a zone, and the zone shifts constantly.</p>
+  <p>Over the past eight to eleven months, Kelnvar has gained more than they've given up. They hold ground they did not hold before. Dravek is on the back foot and they know it, which means the current Dravek military objective is straightforward: push Kelnvar back to where they were. Everything else is secondary.</p>
+</div>
+
+<div class="two-col reveal" style="margin-top:2rem;">
+  <div class="faction-block dravek">
+    <h3 class="faction-name">Dravek — Current Position</h3>
+    <p class="faction-body">On the back foot. Lost ground over the past engagement period. Currently executing a counteroffensive to reclaim lost territory. Morale is strained but not broken. The dragon incident occurred during a Dravek offensive push — forty-three soldiers witnessed it from the Dravek forward position.</p>
+  </div>
+  <div class="faction-block kelnvar">
+    <h3 class="faction-name">Kelnvar — Current Position</h3>
+    <p class="faction-body">Pressing the advantage. Holding ground taken over eight months. Defensive posture in the most recently gained territory while continuing to probe for further weaknesses. The dragon incident affected both sides indiscriminately — Kelnvar casualties from the fire are also being counted.</p>
+  </div>
+</div>
+
+<div class="ornamental-rule reveal"><span>✦</span></div>
+
+<div class="reveal">
+  <p class="section-label">The Third Party</p>
+  <h2 class="section-title">The Greymarch Incident</h2>
+</div>
+
+<div class="incident-full reveal">
+  <div class="prose-block" style="max-width:100%;">
+    <p>During a Dravek offensive push in the highland approach northeast of Strelnov, at approximately mid-morning, something descended from the cloud cover over the Greymarch.</p>
+    <p>Forty-three soldiers witnessed it from the Dravek forward position. Additional witnesses from Kelnvar positions have since been identified, bringing the confirmed eyewitness count to sixty-one across both sides. The accounts are consistent in their major details.</p>
+    <p>The creature was large — estimates vary, but the consensus across all accounts places its wingspan at roughly the width of a large manor house, possibly wider. It had four limbs total, the front two being the wings. It moved on the wrist joints of those wings when it briefly touched ground. The coloration was dark, the scales dense and heavily plated, particularly at the skull and shoulders. Multiple horns, forward-curving. The eyes, in accounts close enough to describe them, were described as yellow.</p>
+    <p>It did not attack. It passed over the engagement zone without slowing. The fire it produced was not directional in the way an archer draws a bow — it burned what was beneath it as it moved, indiscriminately, affecting soldiers from both sides. It took a supply horse — seized it whole in its claws while in motion — and gained altitude back into the cloud cover.</p>
+    <p>Eleven confirmed dead from the fire. Seven more from the resulting chaos of the engagement breaking down. The creature did not return.</p>
+    <p>The field report was filed the same day. Both kingdoms have now received copies. Every other kingdom in the seven has received a summary. The Church has received the full report and has not yet responded publicly. It is understood that a response is being prepared.</p>
+  </div>
+</div>
+
+<div class="reveal">
+  <p class="section-label">Implications</p>
+  <h2 class="section-title">What It Means</h2>
+  <div class="prose-block">
+    <p>The practical military implications are secondary to the theological ones, though both are significant. Militarily: an entity exists that does not recognize sides, cannot be negotiated with, operates from terrain that neither kingdom patrols or controls, and is capable of inflicting casualties on a battlefield without warning or apparent purpose. Both kingdoms have reason to be concerned. Neither has a plan.</p>
+    <p>Theologically: the Church has spent two centuries teaching that dragons are stories. Bedtime stories. The embellishment of frightened people in unlit rooms. The murals in older churches that depict them are explained as symbolic, allegorical, metaphorical. Sixty-one eyewitnesses across two armies are not metaphorical.</p>
+    <p>The question the soldiers are asking in their camps — quietly, in the way people ask questions they are not sure they want answered — is not whether dragons are real. That question has been settled. The question is what else the Church has been wrong about. What else from the old stories is waiting in the wilderness beyond the roads. What the superstitious old woman from the village who says changelings took her son fifty years ago actually saw.</p>
+    <p>The world has gotten larger. Nobody asked for that.</p>
+  </div>
+</div>
+```
+
+  </div>
+</main>
+<footer><p>Blood &amp; Iron &mdash; The Seven Kingdoms &mdash; A Community Lore Setting</p></footer>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.06 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
